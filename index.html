@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Baby😘</title>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<style>
+@mixin vertical-align {
+	position: relative;
+	top: 40%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+
+h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.wrapper {
+	background: #3741d0;
+	background: -moz-linear-gradient(top,  #3741d0 0%, #332180 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3741d0), color-stop(100%,#332180));
+	background: -webkit-linear-gradient(top,  #3741d0 0%,#332180 100%);
+	background: -o-linear-gradient(top,  #3741d0 0%,#332180 100%);
+	background: -ms-linear-gradient(top,  #3741d0 0%,#332180 100%);
+	background: linear-gradient(to bottom,  #3741d0 0%,#332180 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3741d0', endColorstr='#332180',GradientType=0 );
+	height:100vh;
+	padding-top: 12px;
+	position: relative;
+	@media (min-width: 600px) {
+		padding-top: 24px;
+	}
+}
+.btn-wrap {
+	display: block;
+	margin: 2em auto;
+	transition: all 0.75s ease; 
+  position: relative;
+	height: 100px;
+	width: 100px;
+	&:before {
+		content: '';
+		border-radius: 50%;
+		box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.15);
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		z-index: 2;
+		width: 120px;
+		height: 120px;
+		transition: all 0.75s ease; 
+	}
+	&:after {
+		position: absolute;
+		background: #ffcc00;
+		width: 140px;
+		height: 140px;
+		z-index: 1;
+		content: '';
+		left: -20px;
+		top: -20px;
+		border-radius: 50%;
+		border-bottom: 3px solid #ff9900;
+		box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.15);
+		transition: all 0.75s ease; 
+	}
+	@media (min-width: 600px) {
+		left: 25%;
+    margin: auto;
+		margin-top: -50px;
+		position: absolute;
+		top: 50%;
+	}
+}
+.tricky {
+	left: 60%;
+	z-index: 50;
+	&:after {
+		background-color: #cc0000;
+		border-bottom-color: #ae0000;
+	}
+	.btn {
+		color: #fff;
+		background: #cc0000;
+		border-bottom: 5px solid #ae0000;
+		&:hover {
+			border-bottom: 3px solid #ae0000;
+		}
+		span {      
+			text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5), 1px 1px 0px rgba(255,100,100,0.5);
+        &:before {
+          content: 'No';
+        }
+		}
+	}
+	&.active {
+		height: 50px;
+		width: 50px;
+		span {
+			font-size: 14px;
+        &:before {
+          content: 'Shh';
+        }
+		}
+		&:before {
+			box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.15);
+			width: 60px;
+			height: 60px;
+			left: -5px;
+			top: -5px;
+		}
+		&:after {
+			box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.15);
+			left: -10px;
+			top: -10px;
+			width: 70px;
+			height: 70px;
+		}
+	}
+}
+
+.btn {
+	background: #ffcc00;
+	border-radius: 50%;
+	border-bottom: 5px solid #ffb300;
+	box-shadow: 0px 4px 2px 2px rgba(0, 0, 0, 0.25);
+	color: #333;
+	display: block;
+	font-weight: bold;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;  
+	transition: all 0.1s ease; 
+	width: 100%;  
+	z-index: 10;
+	&:hover {
+		border-bottom: 3px solid #ffb300;
+		box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.3);
+		margin-top: 2px;
+	}
+	span {
+		font-size: 21px;
+		line-height: 1;
+		text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+		text-transform: uppercase;
+		transition: all 0.25s ease; 
+		@include vertical-align;
+	}
+}
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body {
+  background: url(https://subtlepatterns.com/patterns/noise_lines.png);
+  font-family: 'Pacifico', cursive;
+  overflow: hidden;
+  color: #fff;
+}
+#example1 {
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 25px;
+}
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+.bgoverlay {
+  background: rgb(103, 58, 183);
+  background: rgba(103, 58, 183, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container {
+  position: relative;
+  margin: 120px auto 0 auto;
+  width: 320px;
+}
+
+.ico {
+  display: block;
+  width: 320px;
+  height: 320px;
+}
+.open .ico {
+  animation: open 4s;
+  transform: scale(10);
+}
+.ico .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -95px;
+  margin-top: -73px;
+  z-index: 4;
+  font-size: 50px;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.open .ico .title {
+  opacity: 0;
+  transition: all 0.3s ease;
+  top: -100px;
+}
+.ico:before, .ico:after, .ico2:before, .ico2:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ico:before, .ico:after, .ico2:before, .ico2:after {
+  display: block;
+  font-size: 20em;
+  color: #ff4081;
+  content: "\f004";
+  font-family: FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico2:before, .ico2:after {
+  color: #e91e63;
+}
+.ico:before {
+  z-index: 3;
+}
+.ico:after {
+  animation: explode 4s infinite;
+}
+
+.ico2:before {
+  animation: explodeSmall 3s infinite;
+}
+.ico2:after {
+  animation: explodeSmall 2s infinite;
+}
+
+.endtext {
+  opacity: 0;
+  position: absolute;
+  top: -100px;
+  width: 100%;
+}
+.open .endtext {
+  top: 0;
+  opacity: 1;
+  animation: show 5s;
+}
+.endtext .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.endtext h1, .endtext h2, .endtext h3 {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-weight: normal;
+}
+.endtext h1 {
+  font-size: 50px;
+}
+.endtext h2 {
+  font-size: 30px;
+}
+.endtext h3 {
+  font-size: 20px;
+}
+
+@keyframes explode {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes explodeSmall {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes open {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(10);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    top: -100px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+</style>
+<body>
+    <script>
+$(document).ready(function(){
+  $('.title').click(function(){
+    $('.container').addClass('open');
+  });
+  
+  
+  $('.close').click(function(){
+    $('.container').removeClass('open');
+  });
+});
+
+
+$(function(){
+	    $(".tricky").on({
+	        mouseover:function(){
+	            $(this).css({
+	                left:(Math.random()*90)+"%",
+	                top:(Math.random()*90)+"%",
+	            });
+	        }
+	    });
+	    $(".btn-wrap").hover(function() {
+	       	$(this).toggleClass('active');
+	    });
+	});
+
+	$('.tricky').bind('touchstart', function(){
+	    $(this).css({
+            left:(Math.random()*90)+"%",
+            top:(Math.random()*90)+"%"
+        });
+	})
+
+    </script>
+<!-- Happy Valentines day Codepen! -->
+<div class="bgoverlay">
+  <div class="container">
+    <span class="ico">
+<span class="ico2"></span>      <span class="title">Click Me</span>
+    </span>
+    <div class="endtext" style="left:-330px">
+      <span class="close" title="Restart"><i class="fa fa-times"></i></span> 
+      <h1>I am Sorry Baby😔</h1> 
+      <h1>I love you Baby😘</h1>
+      <h2>Be mine Best Friend Forever💛</h2>
+      <h3>~Your Best Friend Vedant❤️</h3>
+      <h3>~aka-Your's Paaadddiii Darling😍</h3>
+      <div id="example1" style = "position: absolute; left:450px; top:-100px; width:max-content;" class="wrapper">
+  
+        <h1>Are You Happy Now?</h1>
+        <h3>Will Come to See Amdavad with Me?</h3>
+        
+        <div class="btn-wrap static" onclick="yess()">
+          <a href="javascript:void(0)" class="btn" title="Yes">
+            <span>Yes</span>
+          </a>
+        </div>
+      
+        <div class="btn-wrap tricky">
+          <a href="javascript:void(0)" class="btn" title="No">
+            <span></span>
+          </a>
+        </div>
+        <div id="firstclk" style="display: none;">wohooooo🥳🥳....yessssssss🎉🎉....Thank you...Love You Baby😘</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function yess(){
+document.getElementById("firstclk").style.display="block";
+}
+</script>
+</body>
+</html>
